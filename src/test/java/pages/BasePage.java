@@ -12,7 +12,9 @@ public class BasePage {
     WebDriver driver;
     WebDriverWait wait;
 
-    public static final String BASE_URL = "https://www.urn.su/qa/ui/basic_test/";
+    //public static final String BASE_URL = "https://www.urn.su/qa/ui/basic_test/";
+    public static final String BASE_URL = "http://uitestingplayground.com";
+
 
     public BasePage(WebDriver driver){
         this.driver = driver;
