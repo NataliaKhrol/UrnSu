@@ -11,13 +11,14 @@ public class ClassAttributePage extends BasePage {
 
     private By BLUE_BUTTON = By.xpath("//button[@class='btn class3 btn-primary btn-test']");
 
-    public void openPage() {
-        driver.get(BASE_URL + "/classattr");
+    public void openPage(String page) {
+        driver.get(BASE_URL + page);
+        return;
     }
 
-    public void newPage() {
-        driver.get(BASE_URL + "/clientdelay");
-    }
+   // public void newPage(String clientdelay) {
+  //      driver.get(BASE_URL + "/clientdelay");
+  //  }
     public void record() {
         driver.findElement(BLUE_BUTTON).click();
         Alert alert = driver.switchTo().alert();

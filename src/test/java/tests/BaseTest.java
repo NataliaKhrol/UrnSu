@@ -14,6 +14,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import pages.BasePage;
 import pages.ClassAttributePage;
+import pages.ClickPage;
 import pages.ClientDelayPage;
 
 import java.util.concurrent.TimeUnit;
@@ -23,6 +24,7 @@ public class BaseTest {
     BasePage basePage;
     ClassAttributePage classAttributePage;
     ClientDelayPage clientDelayPage;
+    ClickPage clickPage;
 
     @Parameters({"browser"})
     @BeforeMethod(description = "Opening the browser")
@@ -44,6 +46,8 @@ public class BaseTest {
         basePage = new BasePage(driver);
         classAttributePage = new ClassAttributePage(driver);
         clientDelayPage = new ClientDelayPage(driver);
+        clickPage = new ClickPage(driver);
+
     }
 
     @AfterMethod(alwaysRun = true, description = "Closing the browser")

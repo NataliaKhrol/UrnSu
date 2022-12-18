@@ -7,7 +7,7 @@ import static org.testng.AssertJUnit.assertEquals;
 public class ClientDelayTest extends BaseTest{
     @Test
     public void trigger() {
-        classAttributePage.newPage();
+        classAttributePage.openPage("/clientdelay");
         clientDelayPage.triggerText();
         assertEquals(clientDelayPage.textMessage(), "Data calculated on the client side.");
     }
